@@ -1,2 +1,2 @@
 test:
-	cd ./ATPBot/ && ython testing.py
+	cd ./ATPBot/ && python testing.py
