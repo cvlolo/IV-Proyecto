@@ -1,3 +1,4 @@
+https://travis-ci.org/cvlolo/IV-Proyecto.svg?branch=master
 # IV-Proyecto
 
 Proyecto basado en python para la asignatura de IV
