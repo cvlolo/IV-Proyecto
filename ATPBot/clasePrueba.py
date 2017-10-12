@@ -6,9 +6,6 @@ dictionary = {"Roger Federer":7505,"Andy Murray":6290, "Alexander Zverev":4400, 
 def extraerPuntuacion(Nombre):
 	return dictionary.get(Nombre)
 
-def extraerNombre(puntuacion):
-	return dictionary.get(puntuacion)
-
 
 def mostrarRanking():
 	clasif = sorted(dictionary.items(), key=lambda dictionary: dictionary[1])
@@ -20,4 +17,4 @@ def mostrarRanking():
 
 	
 
-print mostrarRanking()
+
