@@ -1,4 +1,4 @@
-https://travis-ci.org/cvlolo/IV-Proyecto.svg?branch=master
+[![Build Status](https://travis-ci.org/cvlolo/IV-Proyecto.svg?branch=master)](https://travis-ci.org/cvlolo/IV-Proyecto)
 # IV-Proyecto
 
 Proyecto basado en python para la asignatura de IV
