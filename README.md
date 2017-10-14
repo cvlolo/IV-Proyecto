@@ -9,7 +9,7 @@ Proyecto basado en python para la asignatura de IV
 ## Explicación
 
 Se realizará un BOT en Telegram programado en Python que nos proporcionará toda la información relevante del tenis profesional de la ATP 
-mostrando información relevante de los Grand Slam con los resultados de los partidos así como mostrar el top 10 del ranking mundial actualizado al momento.
+mostrando información relevante de los diferentes Grand Slam con los resultados de los partidos así como mostrar el top 10 del ranking mundial actualizado al momento.
 Se utilizará la técnica del Web Scraping en Python para extraer la información necesaria así como de una base de datos para almacenarla.
 
 El BOT se encargará de satisfacer a todos los amantes del tenis profesional de una forma rápida y cómoda, agrupando la información relevante.
