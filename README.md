@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/cvlolo/IV-Proyecto.svg?branch=master)](https://travis-ci.org/cvlolo/IV-Proyecto)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 # IV-Proyecto
 
 Proyecto basado en python para la asignatura de IV
@@ -22,4 +23,6 @@ El BOT se encargará de satisfacer a todos los amantes del tenis profesional de 
 * Despliegue en la nube
 
 
+## TDD e Integración Continua 
 
+Para el desarrollo del proyecto vamos a utilizar la práctica de ingeniería de software denominada TDD o desarrollo guiado por pruebas, en la cuál se crearán una serie de pruebas unitarias (unit test) para asegurarnos de que en todo momento nuestro código es limpio y funcional. Esto nos facilitará llevar a cabo la pŕatica de Integración Continua, en la que estaremos continuamente integrando nuestro código con el del resto del equipo del proyecto y nos permitirá corregir los errores que surjan durante el desarrollo de forma más rápida. 
