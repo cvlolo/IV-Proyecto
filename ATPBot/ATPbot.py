@@ -20,7 +20,9 @@ bot.set_update_listener(listener)
 def clasificacion(m): 
 	cid = m.chat.id 
 	m=db.mostrar_jugadores()
-	mensaje=  ''.join(m)
+	mensaje=""
+	for i in m
+		mensaje=mensaje + " " + str(i)
 	bot.send_message( cid, mensaje)
 	
 
