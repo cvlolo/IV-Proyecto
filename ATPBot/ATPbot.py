@@ -3,6 +3,7 @@ from telebot import types
 from telebot import util
 import time 
 import os
+import db
 
 TOKEN = os.environ['TOKEN'] 
 bot = telebot.TeleBot(TOKEN)
@@ -18,8 +19,10 @@ bot.set_update_listener(listener)
 @bot.message_handler(commands=['clasificacion']) 
 def clasificacion(m): 
 	cid = m.chat.id 
+	db.insertar_jugador("Rafa",10)
 	mensaje="Bienvenido al bot de la ATP"
 	bot.send_message( cid, mensaje)
+	
 
 
 bot.set_update_listener(listener)
