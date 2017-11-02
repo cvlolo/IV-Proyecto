@@ -24,6 +24,6 @@ def mostrarClasificacion():
 	players=db.mostrar_jugadores()
 	points=db.mostrar_puntos()
 	string=""
-	for i in range(0,len(players)):
+	for i in range(0,len(players)/2):
 		string= "En la posicion " +str(i)+ "esta "+ players[0] + "con: " +points[1]+ " puntos" +"\n" + string
 	return string
