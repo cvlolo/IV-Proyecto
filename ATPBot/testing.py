@@ -1,7 +1,7 @@
 import clasePrueba
 import unittest
 
-class TestingClass(unittest.TestCase):
+class Prueba(unittest.TestCase):
 	def test_primerTest(self):
 		self.assertTrue(0 <= clasePrueba.extraerPuntuacion("Rafael Nadal") <= 50000)
 		self.assertEqual(clasePrueba.extraerPuntuacion("Rafael Nadal"), 9875)
