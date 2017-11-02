@@ -20,7 +20,7 @@ def consultar_jugador(name):
 	conn = psycopg2.connect(database=url.path[1:],user=url.username,password=url.password,host=url.hostname,port=url.port)
 	cursor = conn.cursor()
 	try:
-		cursor.execute("select nombre from jugadores where nombre=%s);", (name))
+		cursor.execute("select nombre from jugadores where nombre=%s);", [name])
 	except psycopg2.Error as e:
 		conn.commit()
 		cursor.close()
