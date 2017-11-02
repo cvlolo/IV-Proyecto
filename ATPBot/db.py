@@ -48,7 +48,7 @@ def mostrar_puntos():
 	cursor = conn.cursor()
 	cursor.execute("select puntos from jugadores;")
 	for punto in cursor:
-		lista.append(punto[1])
+		lista.append(punto[0])
 	cursor.close()
 	conn.close()
 	return lista
