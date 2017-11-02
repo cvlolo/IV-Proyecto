@@ -21,7 +21,7 @@ def clasificacion(m):
 	cid = m.chat.id 
 	m=db.mostrar_jugadores()
 	mensaje=""
-	for i in m
+	for i in m:
 		mensaje=mensaje + " " + str(i)
 	bot.send_message( cid, mensaje)
 	
