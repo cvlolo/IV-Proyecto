@@ -21,10 +21,7 @@ bot.set_update_listener(listener)
 def clasificacion(m): 
 	cid = m.chat.id 
 	scraping.scrapClasificacion()
-	m=db.mostrar_jugadores()
-	mensaje=""
-	for i in m:
-		mensaje=mensaje + " " + str(i)
+	mensaje=scraping.mostrarClasificacion()
 	bot.send_message( cid, mensaje)
 	
 

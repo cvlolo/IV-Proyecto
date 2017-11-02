@@ -20,4 +20,9 @@ def scrapClasificacion():
 		for x in range(len(nombres)):
 			db.insertar_jugador(nombres[x],str(pts[x]))
 
-	
+def mostrarClasificacion():
+	players=db.mostrar_jugadores()
+	points=db.mostrar_puntos()
+	for i in range(0,len(players)):
+		string= str(i)+ "º" + "-> " + players[0] + " Puntos -> " +points[1]+ "\n" + string
+	return string

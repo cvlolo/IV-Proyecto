@@ -41,3 +41,14 @@ def mostrar_jugadores():
 	cursor.close()
 	conn.close()
 	return lista
+
+def mostrar_puntos():
+	lista = []
+	conn = psycopg2.connect(database=url.path[1:],user=url.username,password=url.password,host=url.hostname,port=url.port)
+	cursor = conn.cursor()
+	cursor.execute("select puntos from jugadores;")
+	for punto in cursor:
+		lista.append(punto[1])
+	cursor.close()
+	conn.close()
+	return lista
