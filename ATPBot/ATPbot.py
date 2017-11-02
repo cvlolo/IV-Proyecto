@@ -4,6 +4,7 @@ from telebot import util
 import time 
 import os
 import db
+import scraping
 
 TOKEN = os.environ['TOKEN'] 
 bot = telebot.TeleBot(TOKEN)
@@ -19,6 +20,7 @@ bot.set_update_listener(listener)
 @bot.message_handler(commands=['clasificacion']) 
 def clasificacion(m): 
 	cid = m.chat.id 
+	scraping.scrapClasificacion()
 	m=db.mostrar_jugadores()
 	mensaje=""
 	for i in m:
