@@ -19,8 +19,7 @@ bot.set_update_listener(listener)
 @bot.message_handler(commands=['clasificacion']) 
 def clasificacion(m): 
 	cid = m.chat.id 
-	db.insertar_jugador("Rafa",10)
-	mensaje="Bienvenido al bot de la ATP"
+	mensaje=db.mostar_jugadores()
 	bot.send_message( cid, mensaje)
 	
 
