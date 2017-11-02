@@ -15,7 +15,7 @@ def listener(messages):
 
 bot.set_update_listener(listener)
 
-@bot.message_handler(commands=['helloworld']) 
+@bot.message_handler(commands=['clasificacion']) 
 def clasificacion(m): 
 	cid = m.chat.id 
 	mensaje="Bienvenido al bot de la ATP"
