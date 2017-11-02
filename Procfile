@@ -1,1 +1,1 @@
-web: cd ATPBot && python ATPbot.py 
+worker: cd ATPBot && python ATPbot.py 
