@@ -4,8 +4,8 @@ from telebot import util
 import time 
 import os
 
-TOKEN = os.environ['TOKEN'] 
-bot = telebot.TeleBot(TOKEN)
+
+bot = telebot.TeleBot("457546213:AAF4iC8ZhhKQuTnLNrz1GGT1lh2SRtpxs64")
 
 def listener(messages):
 	for m in messages: 
