@@ -18,6 +18,6 @@ def scrapClasificacion():
 	pts = patron.findall(str(puntos))
 
 	for x in range(len(nombres)):
-		db.insertar_jugador(nombres[x],pts[x])
+		db.insertar_jugador(nombres[x],str(pts[x]))
 
 	
