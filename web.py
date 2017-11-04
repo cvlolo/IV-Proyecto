@@ -10,7 +10,7 @@ app = Flask(__name__)
 }
 
 @app.route("/")
-def json():
+def func():
     data = {"status": "OK"}
     return json.dumps(data)
 
