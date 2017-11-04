@@ -7,16 +7,10 @@ app = Flask(__name__)
 api = Api(app)
 
 
-class Status(Resource):
-    def status(self):
-
-        schema = {
-           "status": "OK"
-        }
-
-        return jsonify(schema)
-
-api.add_resource(checkStatus, '/')
+@app.route("/")
+def bienvenido():
+    data = {"status": "OK"}
+    return json.dumps(data)
 
 if __name__ == "__main__":
     app.run(debug=True, use_reloader=True)
