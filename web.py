@@ -4,14 +4,16 @@ from flask_restful import Resource, Api
 
 
 app = Flask(__name__)
-api = Api(app)
 
+{
+   "status": "OK"
+}
 
 @app.route("/")
-def bienvenido():
+def json():
     data = {"status": "OK"}
     return json.dumps(data)
 
 if __name__ == "__main__":
-    app.run(debug=True, use_reloader=True)
-
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug = True, use_reloader = True)
