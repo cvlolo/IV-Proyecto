@@ -1,2 +1,2 @@
 worker: cd ATPBot && python ATPbot.py 
-web: gunicorn API_web:app --log-file=-
+web: gunicorn web:app --log-file=-
