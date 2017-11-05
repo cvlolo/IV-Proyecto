@@ -4,17 +4,17 @@ import scraping
 import unittest
 
 class Database(unittest.TestCase):
-	def test_consultar(self):
+	def testConsultar(self):
 		error=db.consultar_jugador("pepe")
 		self.assertEqual(error,-1)
 
-	def test_insertar(self):
+	def testInsertar(self):
 		lista=[]
 		db.insertar_jugador("Vardy","15")
 		lista=db.consultar_jugador("Vardy")
 		self.assertEqual(lista[0], "Vardy")
 
-	def borrar_jugador(self):
+	def testBorrar(self):
 		lista=[]
 		db.borrar_jugador("Vardy")
 		lista=db.consultar_jugador("Vardy")
