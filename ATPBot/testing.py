@@ -5,7 +5,7 @@ import unittest
 
 class Database(unittest.TestCase):
 	def testConsultar(self):
-		error=db.consultar_jugador("pepe")
+		error=db.consultar_jugador("Rafael Nadal")
 		self.assertEqual(error,-1)
 
 	def testInsertar(self):
