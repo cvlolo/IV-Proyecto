@@ -16,11 +16,22 @@ def insertar_jugador(nombre,puntos):
 	cursor.close()
 	conn.close()
 
+def borrar_jugador(nombre):
+	conn = psycopg2.connect(database=url.path[1:],user=url.username,password=url.password,host=url.hostname,port=url.port)
+	cursor = conn.cursor()
+	valores_borrar = (nombre, )
+	cursor.execute('Delete from jugadores where nombre=%s', valores_borrar)
+	conn.commit()
+	cursor.close()
+	conn.close()
+
 def consultar_jugador(name):
 	conn = psycopg2.connect(database=url.path[1:],user=url.username,password=url.password,host=url.hostname,port=url.port)
 	cursor = conn.cursor()
 	try:
 		cursor.execute("select nombre from jugadores where nombre=%s);", [name])
+	for jugador in cursor:
+		lista.append(jugador[1])
 	except psycopg2.Error as e:
 		conn.commit()
 		cursor.close()
