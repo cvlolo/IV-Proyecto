@@ -31,14 +31,13 @@ def consultar_jugador(name):
 	cursor = conn.cursor()
 	try:
 		cursor.execute("select nombre from jugadores where nombre=%s);", [name])
+	for jugador in cursor:
+		lista.append(jugador[0])
 	except psycopg2.Error as e:
 		conn.commit()
 		cursor.close()
 		conn.close()
 		return -1
-
-	for jugador in cursor:
-			lista.append(jugador[0])
 	conn.commit()
 	cursor.close()
 	conn.close()
