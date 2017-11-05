@@ -1,4 +1,4 @@
-import funVarias.py
+import funVarias
 import unittest
 
 class Test(unittest.TestCase):
@@ -13,8 +13,6 @@ class Test(unittest.TestCase):
 		ptos=funVarias.ObtenerPuntosJugador("Pepe")
 		self.assertFalse(ptos,10)
 		
-
-
         def test_CompClas(self):
                 self.assertTrue(len(funVarias.ATPClas()) > 0)  #Compruebo que el tamanio de la lista de la clasificacion es 
                                                                             #4 ya que de momento tengo 4 equipos
