@@ -13,7 +13,7 @@ def insertarJugador(nombre,puntos):
 	ATP_datos[nombre]=puntos
 
 def borrarJugador(nombre,puntos):
-	del ATP_datos[nombre]=puntos
+	del ATP_datos[nombre]
 
 
 def ATPClas():
