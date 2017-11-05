@@ -12,6 +12,7 @@ class Database(unittest.TestCase):
 		lista=[]
 		db.insertar_jugador("Vardy","15")
 		lista=db.consultar_jugador("Vardy")
+		print(lista)
 		self.assertEqual(lista[0], "Vardy")
 
 	def testBorrar(self):
