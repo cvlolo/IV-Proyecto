@@ -26,12 +26,14 @@ def borrar_jugador(nombre):
 	conn.close()
 
 def consultar_jugador(name):
+	lista=[]
 	conn = psycopg2.connect(database=url.path[1:],user=url.username,password=url.password,host=url.hostname,port=url.port)
 	cursor = conn.cursor()
 	try:
 		cursor.execute("select nombre from jugadores where nombre=%s);", [name])
 		for jugador in cursor:
 			lista.append(jugador[1])
+		return lista
 	except psycopg2.Error as e:
 		conn.commit()
 		cursor.close()
