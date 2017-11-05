@@ -1,6 +1,4 @@
-import ATPbot
-import db
-import scraping
+
 import unittest
 
 class Database(unittest.TestCase):
