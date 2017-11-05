@@ -3,7 +3,7 @@ import requests
 import html5lib
 import re 
 
-ATP_datos = {'Nadal': 1020 , 'Federer' : 980, 'Djokovik': 650}
+ATP_datos = {"Nada": 1020 , "Federer" : 980, "Djokovik": 650}
 
 
 def ObtenerPuntosJugador(jugador):
