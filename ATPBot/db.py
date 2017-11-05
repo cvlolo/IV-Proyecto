@@ -19,8 +19,8 @@ def insertar_jugador(nombre,puntos):
 def borrar_jugador(nombre):
 	conn = psycopg2.connect(database=url.path[1:],user=url.username,password=url.password,host=url.hostname,port=url.port)
 	cursor = conn.cursor()
-	valores_borrar = (nombre, )
-	cursor.execute('Delete from jugadores where nombre=%s', valores_borrar)
+	valores = (nombre, )
+	cursor.execute('Delete from jugadores where nombre=%s', valores)
 	conn.commit()
 	cursor.close()
 	conn.close()
