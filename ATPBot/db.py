@@ -38,7 +38,7 @@ def consultar_jugador(name):
 		return -1
 
 	for jugador in cursor:
-			lista.append(jugador[1])
+			lista.append(jugador[0])
 	conn.commit()
 	cursor.close()
 	conn.close()
