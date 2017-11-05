@@ -12,7 +12,7 @@ def ObtenerPuntosJugador(jugador):
 def insertarJugador(nombre,puntos):
 	ATP_datos[nombre]=puntos
 
-def borrarJugador(nombre,puntos):
+def borrarJugador(nombre):
 	del ATP_datos[nombre]
 
 
