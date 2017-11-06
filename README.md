@@ -31,7 +31,7 @@ Para el desarrollo del proyecto vamos a utilizar la práctica de ingeniería de 
 
 ## Despliegue
 
-Despliegue [https://atpbot.herokuapp.com/](https://atpbot.herokuapp.com/)
+Despliegue https://atpbot.herokuapp.com/
 
 Para realizar el despliegue de la aplicación he utilizado [Heroku](https://dashboard.heroku.com/) como Paas ya que es gratuito y nos permite realizar el despliegue de forma sencilla, además de que nos proporciona una base de datos (PostgreSQL) de forma gratuita y a la que se accede fácilmente, por lo que puede integrarse con el proyecto de forma inmediata.
 
