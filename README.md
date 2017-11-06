@@ -36,6 +36,7 @@ Despliegue https://atpbot.herokuapp.com/
 Para realizar el despliegue de la aplicación he utilizado [Heroku](https://dashboard.heroku.com/) como Paas ya que es gratuito y nos permite realizar el despliegue de forma sencilla, además de que nos proporciona una base de datos (PostgreSQL) de forma gratuita y a la que se accede fácilmente, por lo que puede integrarse con el proyecto de forma inmediata.
 
 En primer lugar, instalamos Heroku CLI en nuestro ordenador utilizando el comando:
+
 		wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
 
 Para conectarnos desde la terminal utilizamos heroku login y ponemos los datos con los que nos hemos registrado. Creamos nuestra aplicación en la página de Heroku y la configuramos para que haga el deploy cada vez que hagamos git push y pase los tests de Travis: 
@@ -57,10 +58,10 @@ Comprobamos que los dos servicios están funcionando:
 
 Por último, comprobamos que la aplicación está funcionando correctamente con los logs de Heroku:
 
-![img](https://github.com/cvlolo/IV-Proyecto/blob/master/img/Heroku4.png)
+![img](https://github.com/cvlolo/IV-Proyecto/blob/master/img/heroku4.png)
 
 La aplicación desplegada puede verse en Telegram bajo el alias @IV_ATP_bot y cuya funcionalidad actual es mostrar un mensaje de bienvenida y la clasificación actual de la atp, almacenada en
 una base de datos. Si entramos en la página https://atpbot.herokuapp.com/ ésta nos devuelve un json con status ok.
 
-![img](https://github.com/cvlolo/IV-Proyecto/blob/master/img/Heroku5.png)
+![img](https://github.com/cvlolo/IV-Proyecto/blob/master/img/heroku5.png)
 
