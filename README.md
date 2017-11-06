@@ -40,8 +40,11 @@ En primer lugar, instalamos Heroku CLI en nuestro ordenador utilizando el comand
 
 Para conectarnos desde la terminal utilizamos heroku login y ponemos los datos con los que nos hemos registrado. Creamos nuestra aplicación en la página de Heroku y la configuramos para que haga el deploy cada vez que hagamos git push y pase los tests de Travis: 
 
+![img](https://github.com/cvlolo/IV-Proyecto/blob/master/img/HEroku1.png)
 
 Por otra parte he instalado como addon la base de datos de Postgres para usarla en mi aplicación:
+
+![img](https://github.com/cvlolo/IV-Proyecto/blob/master/img/Heroku2.png)
 
 Hay que crear el archivo Procfile que contendrá las opciones de despliegue de Heroku:
 
@@ -50,10 +53,14 @@ Hay que crear el archivo Procfile que contendrá las opciones de despliegue de H
 
 Comprobamos que los dos servicios están funcionando:
 
+![img](https://github.com/cvlolo/IV-Proyecto/blob/master/img/Heroku3.png)
 
 Por último, comprobamos que la aplicación está funcionando correctamente con los logs de Heroku:
 
+![img](https://github.com/cvlolo/IV-Proyecto/blob/master/img/Heroku4.png)
 
 La aplicación desplegada puede verse en Telegram bajo el alias @IV_ATP_bot y cuya funcionalidad actual es mostrar un mensaje de bienvenida y la clasificación actual de la atp, almacenada en
 una base de datos. Si entramos en la página https://atpbot.herokuapp.com/ ésta nos devuelve un json con status ok.
+
+![img](https://github.com/cvlolo/IV-Proyecto/blob/master/img/Heroku5.png)
 
