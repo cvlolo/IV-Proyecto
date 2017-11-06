@@ -30,3 +30,30 @@ El BOT se encargará de satisfacer a todos los amantes del tenis profesional de 
 Para el desarrollo del proyecto vamos a utilizar la práctica de ingeniería de software denominada TDD o desarrollo guiado por pruebas, en la cuál se crearán una serie de pruebas unitarias (unit test) para asegurarnos de que en todo momento nuestro código es limpio y funcional. Esto nos facilitará llevar a cabo la pŕatica de Integración Continua, en la que estaremos continuamente integrando nuestro código con el del resto del equipo del proyecto y nos permitirá corregir los errores que surjan durante el desarrollo de forma más rápida. 
 
 ## Despliegue
+
+Despliegue https://atpbot.herokuapp.com/
+
+Para realizar el despliegue de la aplicación he utilizado [Heroku](https://dashboard.heroku.com/) como Paas ya que es gratuito y nos permite realizar el despliegue de forma sencilla, además de que nos proporciona una base de datos (PostgreSQL) de forma gratuita y a la que se accede fácilmente, por lo que puede integrarse con el proyecto de forma inmediata.
+
+En primer lugar, instalamos Heroku CLI en nuestro ordenador utilizando el comando:
+		wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
+
+Para conectarnos desde la terminal utilizamos heroku login y ponemos los datos con los que nos hemos registrado. Creamos nuestra aplicación en la página de Heroku y la configuramos para que haga el deploy cada vez que hagamos git push y pase los tests de Travis: 
+
+
+Por otra parte he instalado como addon la base de datos de Postgres para usarla en mi aplicación:
+
+Hay que crear el archivo Procfile que contendrá las opciones de despliegue de Heroku:
+
+		worker: cd ATPBot && python ATPbot.py 
+		web: gunicorn web:app --log-file=-
+
+Comprobamos que los dos servicios están funcionando:
+
+
+Por último, comprobamos que la aplicación está funcionando correctamente con los logs de Heroku:
+
+
+La aplicación desplegada puede verse en Telegram bajo el alias @IV_ATP_bot y cuya funcionalidad actual es mostrar un mensaje de bienvenida y la clasificación actual de la atp, almacenada en
+una base de datos. Si entramos en la página https://atpbot.herokuapp.com/ ésta nos devuelve un json con status ok.
+
