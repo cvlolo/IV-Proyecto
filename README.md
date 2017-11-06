@@ -26,3 +26,5 @@ El BOT se encargará de satisfacer a todos los amantes del tenis profesional de 
 ## TDD e Integración Continua 
 
 Para el desarrollo del proyecto vamos a utilizar la práctica de ingeniería de software denominada TDD o desarrollo guiado por pruebas, en la cuál se crearán una serie de pruebas unitarias (unit test) para asegurarnos de que en todo momento nuestro código es limpio y funcional. Esto nos facilitará llevar a cabo la pŕatica de Integración Continua, en la que estaremos continuamente integrando nuestro código con el del resto del equipo del proyecto y nos permitirá corregir los errores que surjan durante el desarrollo de forma más rápida. 
+
+## Des
