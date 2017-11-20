@@ -28,6 +28,6 @@ RUN pip install -r IV-Proyecto/requirements.txt
 EXPOSE 80
 WORKDIR IV-Proyecto/
 CMD ["gunicorn","--config=config_gunicorn.py","web:app"]
-
+CMD cd ATPBot/ && python ATPbot.py
 
 
