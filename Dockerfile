@@ -27,4 +27,5 @@ RUN pip install -r IV-Proyecto/requirements.txt
 
 EXPOSE 80 443 88 8443
 CMD cd IV-Proyecto/ATPBot && python ATPbot.py
+CMD ["gunicorn","web:app"]
 
