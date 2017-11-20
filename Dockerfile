@@ -26,7 +26,9 @@ RUN git clone https://github.com/cvlolo/IV-Proyecto.git
 RUN pip install -r IV-Proyecto/requirements.txt
 
 EXPOSE 80
-CMD ["gunicorn","--config=config.py","web:app"]
-CMD cd IV-Proyecto/ATPBot && python ATPbot.py
+WORKDIR Proyecto_IV/
+CMD ["gunicorn","--config=config_gunicorn.py","web:app"]
+WORKDIR Proyecto_IV/ATPBot
+CMD python ATPbot.py
 
 
