@@ -15,7 +15,7 @@ def status():
     return json.dumps(js)
 
 @app.route("/status")
-def status():
+def st():
     js = {"status": "OK"}
     return json.dumps(js)
 
