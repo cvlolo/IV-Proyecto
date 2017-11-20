@@ -12,12 +12,12 @@ app = Flask(__name__)
 @app.route("/")
 def status():
     js = {"status": "OK"}
-    return json.dumps(js)
+    return jsonify(js)
 
 @app.route("/status")
 def st():
     js = {"status": "OK"}
-    return json.dumps(js)
+    return jsonify(js)
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
