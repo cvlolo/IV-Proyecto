@@ -8,19 +8,19 @@ api = Api(app)
 
 class status(Resource):
     def get(self):
-        schema = {
+        js = {
            "status": "OK"
         }
-        return jsonify(schema)
+        return jsonify(js)
 
 api.add_resource(status, '/')
 
 class statusDocker(Resource):
     def get(self):
-        schema = {
+        js = {
            "status": "OK"
         }
-        return jsonify(schema)
+        return jsonify(js)
 
 api.add_resource(statusDocker, '/status')
 
