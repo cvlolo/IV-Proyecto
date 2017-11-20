@@ -29,7 +29,7 @@ El BOT se encargará de satisfacer a todos los amantes del tenis profesional de 
 
 Para el desarrollo del proyecto vamos a utilizar la práctica de ingeniería de software denominada TDD o desarrollo guiado por pruebas, en la cuál se crearán una serie de pruebas unitarias (unit test) para asegurarnos de que en todo momento nuestro código es limpio y funcional. Esto nos facilitará llevar a cabo la pŕatica de Integración Continua, en la que estaremos continuamente integrando nuestro código con el del resto del equipo del proyecto y nos permitirá corregir los errores que surjan durante el desarrollo de forma más rápida. 
 
-## Despliegue
+## Despliegue en Heroku
 
 Despliegue https://atpbot.herokuapp.com/
 
@@ -64,4 +64,6 @@ La aplicación desplegada puede verse en Telegram bajo el alias @IV_ATP_bot y cu
 una base de datos. Si entramos en la página https://atpbot.herokuapp.com/ ésta nos devuelve un json con status ok.
 
 ![img](https://github.com/cvlolo/IV-Proyecto/blob/master/img/heroku5.png)
+
+## Despliegue en Docker
 
