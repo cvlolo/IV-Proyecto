@@ -127,7 +127,7 @@ Enlace del repositorio en Docker Hub: [https://hub.docker.com/r/cvlolox/iv-proye
 Una vez tenemos el contenedor, lo desplegamos en Zeit. Para ello tenemos que instalar now con npm install -g now , importante haber instalado previamente npm y node.js con apt-get. 
 Ejecutamos now -e "TOKEN=MI_TOKEN" -e "DATABASE_URL=MI_DATABASE" en el directorio donde se encuentra el Dockerfile y autoámticamente se desplegará el contenedor y obtenedremos la url.
 
-Contenedor 
+Contenedor [iv-proyecto-oskzikoxyu.now.sh](iv-proyecto-oskzikoxyu.now.sh)
 
 
 
