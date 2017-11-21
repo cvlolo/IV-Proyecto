@@ -11,7 +11,7 @@ class status(Resource):
         js = {
            "status": "OK"
         }
-        return jsonify(js)
+        return json.dumps(js)
 
 api.add_resource(status, '/')
 
@@ -20,7 +20,7 @@ class statusDocker(Resource):
         js = {
            "status": "OK"
         }
-        return jsonify(js)
+        return json.dumps(js)
 
 api.add_resource(statusDocker, '/status')
 
