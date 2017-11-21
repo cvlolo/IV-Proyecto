@@ -67,3 +67,68 @@ una base de datos. Si entramos en la página https://atpbot.herokuapp.com/ ésta
 
 ## Despliegue en Docker
 
+Lo primero que tenemos que hacer es registrarnos en la página de [Docker](https://www.docker.com/) e irnos al apartado de Create automated build
+
+![img](https://github.com/cvlolo/IV-Proyecto/blob/master/img/Docker.png)
+
+Autorizamos a Docker a conectarse a nuestra cuenta de GitHub
+
+![img](https://github.com/cvlolo/IV-Proyecto/blob/master/img/Docker2.png)
+
+Una vez ahí creamos nuestro repositorio de Docker rellenando los datos 
+
+![img](https://github.com/cvlolo/IV-Proyecto/blob/master/img/Docker3.png)
+
+Ahora tenemos que crear un fichero Dockerfile que contenga los datos necesarios para que Docker pueda crear el contenedor, siendo mi Dockerfile el siguiente:
+
+		FROM ubuntu:16.04
+		MAINTAINER Manuel Casado Vergara
+
+		#Variables de entorno
+		ARG token_bot
+
+		ARG database
+
+		ENV TOKEN=$token_bot
+
+		ENV DATABASE_URL=$database
+
+		RUN apt-get update
+		RUN apt-get install -y python-setuptools
+		RUN apt-get install -y python-dev
+		RUN apt-get install -y build-essential
+		RUN apt-get install -y libpq-dev
+		RUN apt-get install -y python-pip
+		RUN pip install --upgrade
+		RUN apt-get install net-tools
+
+		RUN apt-get install -y git
+		RUN git clone https://github.com/cvlolo/IV-Proyecto.git
+
+
+		RUN pip install -r IV-Proyecto/requirements.txt
+
+		EXPOSE 80
+		WORKDIR IV-Proyecto/
+		CMD ./script.sh
+
+Hacemos push del fichero Dockerfile a nuestro repositorio y aumáticamente Docker empezará a hacer la build del contenedor:
+
+![img](https://github.com/cvlolo/IV-Proyecto/blob/master/img/Docker4.png)
+
+Una vez acabado, se puede hacer pull del repositorio con docker pull cvlolox/iv-proyecto y ejecutarlo con sudo docker run -e "TOKEN=MI_TOKEN" -e "DATABASE_URL=MI_DATABASE" -i -t cvlolox/iv-proyecto
+
+El resultado es el siguiente 
+
+![img](https://github.com/cvlolo/IV-Proyecto/blob/master/img/Docker5.png)
+
+Enlace del repositorio en Docker Hub: [https://hub.docker.com/r/cvlolox/iv-proyecto/](https://hub.docker.com/r/cvlolox/iv-proyecto/)
+
+Una vez tenemos el contenedor, lo desplegamos en Zeit. Para ello tenemos que instalar now con npm install -g now , importante haber instalado previamente npm y node.js con apt-get. 
+Ejecutamos now -e "TOKEN=MI_TOKEN" -e "DATABASE_URL=MI_DATABASE" en el directorio donde se encuentra el Dockerfile y autoámticamente se desplegará el contenedor y obtenedremos la url.
+
+Contenedor 
+
+
+
+
