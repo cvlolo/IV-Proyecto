@@ -12,14 +12,12 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def principal():
-    data = {"status": "OK"}
-    return jsonify(data)
+def rutaStatus():
+    return jsonify(status='OK')
 
 @app.route("/status")
-def docker():
-    data = {"status": "OK"}
-    return jsonify(data)
+def rutaStatusDocker():
+    return jsonify(status='OK')
 
 if __name__ == "__main__":
 	app.run(debug = True, use_reloader = True)
