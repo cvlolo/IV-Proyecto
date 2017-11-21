@@ -122,12 +122,12 @@ El resultado es el siguiente
 
 ![img](https://github.com/cvlolo/IV-Proyecto/blob/master/img/Docker5.png)
 
-Enlace del repositorio en Docker Hub: [https://hub.docker.com/r/cvlolox/iv-proyecto/](https://hub.docker.com/r/cvlolox/iv-proyecto/)
+Enlace del repositorio en Docker Hub: https://hub.docker.com/r/cvlolox/iv-proyecto/
 
 Una vez tenemos el contenedor, lo desplegamos en Zeit. Para ello tenemos que instalar now con npm install -g now , importante haber instalado previamente npm y node.js con apt-get. 
 Ejecutamos now -e "TOKEN=MI_TOKEN" -e "DATABASE_URL=MI_DATABASE" en el directorio donde se encuentra el Dockerfile y autoámticamente se desplegará el contenedor y obtenedremos la url.
 
-Contenedor [https://iv-proyecto-nhuhtlpcmv.now.sh/](https://iv-proyecto-nhuhtlpcmv.now.sh/)
+Contenedor https://iv-proyecto-nhuhtlpcmv.now.sh/
 
 
 
