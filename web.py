@@ -1,39 +1,27 @@
-from flask import Flask, request, jsonify
+from flask import Flask,request, jsonify
+import os
 import json
-from flask_restful import Resource, Api
-
 
 app = Flask(__name__)
-api = Api(app)
 
-class status(Resource):
-    def get(self):
-        js = {
-           "status": "OK"
-        }
-        return json.dumps(js)
 
-api.add_resource(status, '/')
+{
+   "status": "OK"
+}
 
-class statusDocker(Resource):
-    def get(self):
-        js = {
-           "status": "OK"
-        }
-        return json.dumps(js)
 
-api.add_resource(statusDocker, '/status')
+
+@app.route("/")
+def principal():
+    data = {"status": "OK"}
+    return jsonify(data)
+
+@app.route("/status")
+def docker():
+    data = {"status": "OK"}
+    return jsonify(data)
 
 if __name__ == "__main__":
-	app.run(debug=True, use_reloader=True)
-
-
-
-
-
-
-
-
-
+app.run(debug = True, use_reloader = True)
 
 
