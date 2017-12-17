@@ -2,9 +2,6 @@
 - hosts: atpbot
   user: ubuntu
   gather_facts: no
-  vars:
-   token_bot: "{{ lookup('env','token_bot') }}"
-   DATABASE_URL: "{{ lookup('env','DATABASE_URL')}}"
 
   pre_tasks:
   - name: Instalar Python
@@ -16,11 +13,11 @@
     become: yes
     command: apt-get update
 
-  - name: Instalar essential
+  - name: Instalar postgre
     become: yes
     command: apt-get install -y libpq-dev
 
-  - name: Instalar postgre
+  - name: Instalar requirements
     become: yes
     command: apt-get install -y build-essential
 
