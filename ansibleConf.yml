@@ -1,0 +1,41 @@
+---
+- hosts: atpbot
+  user: ubuntu
+  gather_facts: no
+  vars:
+   token_bot: "{{ lookup('env','token_bot') }}"
+   DATABASE_URL: "{{ lookup('env','DATABASE_URL')}}"
+
+  pre_tasks:
+  - name: Instalar Python
+    become: yes
+    raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+
+  tasks:
+  - name: Actualizar sistema
+    become: yes
+    command: apt-get update
+
+  - name: Instalar essential
+    become: yes
+    command: apt-get install -y libpq-dev
+
+  - name: Instalar postgre
+    become: yes
+    command: apt-get install -y build-essential
+
+  - name: Instalar Git
+    become: yes
+    command: apt-get install -y git
+
+  - name: Instalar pip
+    become: yes
+    command: apt-get install -y python-pip
+
+  - name: Clonar GitHub
+    become: yes
+    git: repo=https://github.com/cvlolo/IV-Proyecto  dest=home/ubuntu/IV-Proyecto clone=yes force=yes
+
+  - name: Instalar requirements
+    become: yes
+    command: pip install -r home/ubuntu/IV-Proyecto/requirements.txt

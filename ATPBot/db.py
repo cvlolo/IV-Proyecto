@@ -6,7 +6,9 @@ import os
 import urlparse
 
 urlparse.uses_netloc.append("postgres")
-url = urlparse.urlparse(os.environ["DATABASE_URL"])
+#url = urlparse.urlparse(os.environ["DATABASE_URL"])
+url = urlparse.urlparse("postgres://inbsxffbeejrpo:4d42e086478383dbf5a170aafcb53026fe232d471a12018a4355f150cb35f0e7@ec2-54-247-81-97.eu-west-1.compute.amazonaws.com:5432/dbk9akrb0si531")
+
 
 def insertar_jugador(nombre,puntos):
 	conn = psycopg2.connect(database=url.path[1:],user=url.username,password=url.password,host=url.hostname,port=url.port)

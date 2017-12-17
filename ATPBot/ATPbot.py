@@ -6,7 +6,8 @@ import os
 import db
 import scraping
 
-TOKEN = os.environ['TOKEN'] 
+#TOKEN = os.environ['TOKEN'] 
+TOKEN="457546213:AAFlPHLkDSyrOlU9CZ3BOj-eV-GDNezBixI"
 bot = telebot.TeleBot(TOKEN)
 
 def listener(messages):
