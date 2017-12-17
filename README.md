@@ -149,7 +149,9 @@ Vamos a utilizar fabric para agilizar todo este proceso de despliegue. En primer
 
 Para usar fabric, habría que utilizar el comando fab -f rutaDeFabric -i KEY.pem -H ubuntu@DNS funcion
 
-Por último, realizo el siguiente [script](https://github.com/cvlolo/IV-Proyecto/blob/master/provision/auto.sh) para agilizar todo el proceso
+Por último, realizo el siguiente [script](https://github.com/cvlolo/IV-Proyecto/blob/master/provision/auto.sh) para agilizar todo el proceso.
+
+Despliegue final: http://ec2-34-212-235-132.us-west-2.compute.amazonaws.com/
 
 
 
