@@ -19,9 +19,9 @@ Vagrant.configure("2") do |config|
     host.vm.hostname = "atpbot"
   end
   config.vm.provider :aws do |aws, override|
-    aws.access_key_id = "ASIAJEG3TN3UB76IO6KA"
-    aws.secret_access_key = "5jV9Gof0vnCeEKw3RU5xXpVcT8x13mzF4xXydNPi"
-    aws.session_token = "FQoDYXdzEIv//////////wEaDBf+wyRSz2I77ETZiyKsAW5cftziO2FUpofFVEJRx77a11tkQv4Zmg06LCfjkx8D2Vl++e73V2daG8BA9BnO2ULN/rXkAHvUTYZ/dNtlgi1UvDFknpB1Ub7/4KAY/+S4bmtMmI1GjkaxDRUZqyJaEUNuMWpj3UI6JUT5zfViPTAMsG8PPLaE5nx//g6DHVWlDtsYtvB7+B8AYntj1jRI/e+HT4X4KoRNT7habv4TpuwklgyBP5s3A17ZkmwoooLZ0QU="
+    aws.access_key_id = "ASIAIQF5KQLWHXOQUCYQ"
+    aws.secret_access_key = "VwArVv176mT0WVg8OETCwtzYGbhdB1v0gXlfnXOZ"
+    aws.session_token = "FQoDYXdzEF0aDEHJs94Djz8MStQmrCKsAQq4cPoEbMGyt6KK8rtgueMl5rtMTMcgrtfjjr5b3UNzMkufbo6iXEe8E6T5mhQNMJLGkFTKsj7TGkv/49ZHFV8SbJGvOXQpqtm0UmLYNysIBKGudDukf7JtS6NvjwxNcmmzGh4ppSa3LkY5dTllaVoNeVIBQNKfjbn2m0MtjwMg3CMtxzRK817dFqxxenCyKIwr4dnk4LITdCt1XGQTuZNqSNxwJotPJLrSSVoo66W40gU="
     aws.keypair_name = "keey"
     aws.region= "us-west-2"
     aws.security_groups ='atpbot'
