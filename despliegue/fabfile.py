@@ -9,7 +9,7 @@ def web():
     run('sudo python home/ubuntu/IV-Proyecto/web.py' )
 
 def atpbot():
-    run('sudo python home/ubuntu/IV-Proyecto/ATPBot/ATbot.py')
+    run('sudo python home/ubuntu/IV-Proyecto/ATPBot/ATPbot.py')
 
 def remove():
 	run('sudo rm -rf ./IV-Proyecto')
