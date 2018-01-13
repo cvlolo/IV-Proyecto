@@ -15,8 +15,8 @@ Vagrant.configure("2") do |config|
 
   config.vm.box = "dummy"
 
-  config.vm.define "atpbot" do |host|
-    host.vm.hostname = "atpbot"
+  config.vm.define "atp" do |host|
+    host.vm.hostname = "atp"
   end
   config.vm.provider :aws do |aws, override|
     aws.access_key_id = "ASIAJSLTBSM36LRL3ZYA"
