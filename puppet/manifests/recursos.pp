@@ -33,5 +33,6 @@ vcsrepo { "/home/ubuntu/":
 
 #Instalamos requirements
 exec { "requirements":
+    require    => File["home/ubuntu/IV-Proyecto/requirements.txt"],
     command => "/usr/bin/pip install -r  home/ubuntu/IV-Proyecto/requirements.txt
 }
