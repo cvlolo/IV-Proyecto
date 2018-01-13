@@ -19,18 +19,18 @@ Vagrant.configure("2") do |config|
     host.vm.hostname = "atpbot"
   end
   config.vm.provider :aws do |aws, override|
-    aws.access_key_id = "ASIAIQF5KQLWHXOQUCYQ"
-    aws.secret_access_key = "VwArVv176mT0WVg8OETCwtzYGbhdB1v0gXlfnXOZ"
-    aws.session_token = "FQoDYXdzEF0aDEHJs94Djz8MStQmrCKsAQq4cPoEbMGyt6KK8rtgueMl5rtMTMcgrtfjjr5b3UNzMkufbo6iXEe8E6T5mhQNMJLGkFTKsj7TGkv/49ZHFV8SbJGvOXQpqtm0UmLYNysIBKGudDukf7JtS6NvjwxNcmmzGh4ppSa3LkY5dTllaVoNeVIBQNKfjbn2m0MtjwMg3CMtxzRK817dFqxxenCyKIwr4dnk4LITdCt1XGQTuZNqSNxwJotPJLrSSVoo66W40gU="
-    aws.keypair_name = "keey"
+    aws.access_key_id = "ASIAJSLTBSM36LRL3ZYA"
+    aws.secret_access_key = "C+1drDX0X6s2M8+uOVEdRpEK4TTomO10e1SGC5lg"
+    aws.session_token = "FQoDYXdzEEcaDAmVeoHjn2KIuqzbDiKsAYsd51QJZvzo65/GVV8S3kVHNnsN5ih/RTZH91mN+OsDi2Z3vcNX2qgkR2msMNT9YzjowLsPOSPgnal7vEwqr7tDk3wTkwEtpG4czdxzQgSXDuKhNjvoFDNbKR/G6+fM/bbdZTu4zUwIQ48ioFGmgv4t6Qz22AXT7fYfysGipqaPOqlrKEU79bDDi7QqN2OxSzNErNTevaKLq5z7PCzdBNEnYH9BQWJKmcGPy1oog5Lo0gU="
+    aws.keypair_name = "Newkey"
     aws.region= "us-west-2"
-    aws.security_groups ='atpbot'
+    aws.security_groups ='atpbot-Nuevo'
     aws.instance_type= 't2.micro'
 
-    aws.ami = "ami-0def3275"
+    aws.ami = "ami-1ee65166"
 
     override.ssh.username = "ubuntu"
-    override.ssh.private_key_path = "keey.pem"
+    override.ssh.private_key_path = "Newkey.pem"
   end
 
     config.vm.provision :ansible do |ansible|
