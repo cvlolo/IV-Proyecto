@@ -151,7 +151,7 @@ Para usar fabric, habría que utilizar el comando fab -f rutaDeFabric -i KEY.pem
 
 Por último, realizo el siguiente [script](https://github.com/cvlolo/IV-Proyecto/blob/master/provision/auto.sh) para agilizar todo el proceso.
 
-Despliegue final: 52.43.23.36
+Despliegue final: 34.217.5.142
 
 
 
