@@ -6,7 +6,7 @@ def install():
 	run('pip install -r /home/ubuntu/IV-Proyecto/requirements.txt')
 
 def web():
-    run('sudo gunicorn --config=/home/ubuntu/IV-Proyecto/config_gunicorn.py web:app -D' )
+    run('sudo chmod a+x script.sh & sudo sh script.sh' )
 
 def atpbot():
     run('sudo python home/ubuntu/IV-Proyecto/ATPBot/ATPbot.py')
