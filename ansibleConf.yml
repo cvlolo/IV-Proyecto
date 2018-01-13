@@ -6,6 +6,9 @@
     - name: actualizamos apt cache
       apt: update_cache=yes
 
+    - name: Instalamos python
+      apt: name=python-dev state=present
+
     - name: Instalamos libpq
       apt: name=libpq-dev state=present
 
