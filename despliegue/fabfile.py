@@ -11,6 +11,10 @@ def web():
 def atpbot():
     run('sudo python home/ubuntu/IV-Proyecto/ATPBot/ATPbot.py')
 
+def runALL():
+	web()
+	atpbot()
+
 def remove():
 	run('sudo rm -rf ./IV-Proyecto')
 
