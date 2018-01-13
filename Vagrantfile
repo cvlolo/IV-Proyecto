@@ -33,11 +33,13 @@ Vagrant.configure("2") do |config|
     override.ssh.private_key_path = "Newkey.pem"
   end
 
-    config.vm.provision :ansible do |ansible|
-    	ansible.playbook = "ansibleConf.yml"
-   	ansible.verbose = "vvv"
-    	ansible.force_remote_user= true
-    	ansible.host_key_checking=false
+    config.vm.provision :puppet do |puppet|
+    	puppet.manifests_path= 'puppet/manifests'
+	puppet.manifest_file = 'recursos.pp'
+	puppet.options = [
+	'--verbose',
+	'--debug',
+    	]
   end
 
 
