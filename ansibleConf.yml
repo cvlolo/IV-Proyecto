@@ -7,7 +7,7 @@
       apt: update_cache=yes
 
     - name: Instalamos python
-      apt: name=python-dev state=present
+      apt: name=python2.7 state=present
 
     - name: Instalamos libpq
       apt: name=libpq-dev state=present
