@@ -19,18 +19,18 @@ Vagrant.configure("2") do |config|
     host.vm.hostname = "atp"
   end
   config.vm.provider :aws do |aws, override|
-    aws.access_key_id = "ASIAJSLTBSM36LRL3ZYA"
-    aws.secret_access_key = "C+1drDX0X6s2M8+uOVEdRpEK4TTomO10e1SGC5lg"
-    aws.session_token = "FQoDYXdzEEcaDAmVeoHjn2KIuqzbDiKsAYsd51QJZvzo65/GVV8S3kVHNnsN5ih/RTZH91mN+OsDi2Z3vcNX2qgkR2msMNT9YzjowLsPOSPgnal7vEwqr7tDk3wTkwEtpG4czdxzQgSXDuKhNjvoFDNbKR/G6+fM/bbdZTu4zUwIQ48ioFGmgv4t6Qz22AXT7fYfysGipqaPOqlrKEU79bDDi7QqN2OxSzNErNTevaKLq5z7PCzdBNEnYH9BQWJKmcGPy1oog5Lo0gU="
-    aws.keypair_name = "Newkey"
+    aws.access_key_id = "ASIAIMF66WWZL3E27M7Q"
+    aws.secret_access_key = "roihYG7zDP1nEq3BB+bpoezwvBqW9QKg1Dkj07rL"
+    aws.session_token = "FQoDYXdzEFEaDKvn5gqqTgQI82B9XCKsAQYlzczpAPDNVZ3OKsztV9gOsZahkjXcQB+uAPqsP/xJIhW1sO5H+Y0AsY4aZkFwVAU8dsHfeg0FYO2wspWswWfJVLuEd6Mx1wcKaulrRMaJcFWUJxtSrX5KX7T8pL342BY3swMXhpoT6SJ0KzhxxCqO/5nF9vvjMGBRbFNRWws6XbYwGtTsGXtz4Ib9GkPRTY86ik2VlrU40MdoZE5VpaKC93vEO7r7GY846HEo0Lzq0gU="
+    aws.keypair_name = "Secure"
     aws.region= "us-west-2"
-    aws.security_groups ='atpbot-Nuevo'
+    aws.security_groups ='Secure'
     aws.instance_type= 't2.micro'
 
     aws.ami = "ami-1ee65166"
 
     override.ssh.username = "ubuntu"
-    override.ssh.private_key_path = "Newkey.pem"
+    override.ssh.private_key_path = "Secure.pem"
   end
 
     config.vm.provision :puppet do |puppet|
