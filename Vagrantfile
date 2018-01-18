@@ -20,8 +20,9 @@ Vagrant.configure("2") do |config|
     host.vm.hostname = "atp"
   end
   config.vm.provider :aws do |aws, override|
-    aws.access_key_id = "ASIAJDH7DFJVWZ3KBPDQ"
-    aws.secret_access_key = "dvok/QnlzwXRZJYG50WCNFuk5195IbxzH193TTdO"
+    aws.access_key_id = ENV['ACCES_KEY']
+    aws.secret_access_key = ENV['SECRET_ACCES_KEY']
+    aws.session_token = ENV['TOKEN']
     aws.keypair_name = "Secure"
     aws.region= "us-west-2"
     aws.security_groups ='Secure'
