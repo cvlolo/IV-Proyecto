@@ -13,15 +13,15 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
 
-  config.vm.box = "dummy"
+  config.vm.box = "ubuntu_aws"
+  config.vm.box_url = "https://github.com/mitchellh/vagrant-aws/raw/master/dummy.box"
 
   config.vm.define "atp" do |host|
     host.vm.hostname = "atp"
   end
   config.vm.provider :aws do |aws, override|
-    aws.access_key_id = "ASIAIMF66WWZL3E27M7Q"
-    aws.secret_access_key = "roihYG7zDP1nEq3BB+bpoezwvBqW9QKg1Dkj07rL"
-    aws.session_token = "FQoDYXdzEFEaDKvn5gqqTgQI82B9XCKsAQYlzczpAPDNVZ3OKsztV9gOsZahkjXcQB+uAPqsP/xJIhW1sO5H+Y0AsY4aZkFwVAU8dsHfeg0FYO2wspWswWfJVLuEd6Mx1wcKaulrRMaJcFWUJxtSrX5KX7T8pL342BY3swMXhpoT6SJ0KzhxxCqO/5nF9vvjMGBRbFNRWws6XbYwGtTsGXtz4Ib9GkPRTY86ik2VlrU40MdoZE5VpaKC93vEO7r7GY846HEo0Lzq0gU="
+    aws.access_key_id = "ASIAJDH7DFJVWZ3KBPDQ"
+    aws.secret_access_key = "dvok/QnlzwXRZJYG50WCNFuk5195IbxzH193TTdO"
     aws.keypair_name = "Secure"
     aws.region= "us-west-2"
     aws.security_groups ='Secure'
@@ -31,9 +31,15 @@ Vagrant.configure("2") do |config|
 
     override.ssh.username = "ubuntu"
     override.ssh.private_key_path = "Secure.pem"
+
+    config.vm.provision "shell", :inline => <<-SHELL
+    apt-get update
+    apt-get install -y puppet
+  SHELL
   end
 
     config.vm.provision :puppet do |puppet|
+	puppet.binary_path="/usr/bin/puppet"
     	puppet.manifests_path= 'puppet/manifests'
 	puppet.manifest_file = 'recursos.pp'
 	puppet.options = [
