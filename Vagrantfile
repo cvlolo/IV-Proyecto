@@ -33,15 +33,12 @@ Vagrant.configure("2") do |config|
     override.ssh.username = "ubuntu"
     override.ssh.private_key_path = "Secure.pem"
 
-    config.vm.provision "shell", :inline => <<-SHELL
-    apt-get update
-    apt-get install -y puppet
-  SHELL
+    
   end
 
     config.vm.provision :puppet do |puppet|
-	puppet.binary_path="/usr/bin/puppet"
-    	puppet.manifests_path= 'puppet/manifests'
+
+    	puppet.manifests_path= 'puppet/manifests/'
 	puppet.manifest_file = 'recursos.pp'
 	puppet.options = [
 	'--verbose',
