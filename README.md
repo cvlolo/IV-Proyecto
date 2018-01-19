@@ -129,29 +129,6 @@ Ejecutamos now -e "TOKEN=MI_TOKEN" -e "DATABASE_URL=MI_DATABASE" en el directori
 
 Contenedor https://iv-proyecto-nhuhtlpcmv.now.sh/
 
-## Despliegue en AWS con Vagrant
-
-Para empezar el despliegue en AWS lo primero que hay que hacer es registrarse en su [página](https://aws.amazon.com/es/).
-También debemos instalar virtualboz y vagrant utilizandos sendos comandos  sudo apt-get install virtualbox y  sudo apt-get install vagrant.
-Una vez tenemos esto instalado, también debemos instalar el plugin de vagrant para trabajar con aws. Este plugin podemos instalarlo con vagrant plugin install vagrant-aws.
-
-Una vez está todo instalado, ejecutamos vagrant init en el directorio de  nuestro proyecto y se creará un archivo Vagrantfile que habrá que modificar y configurar como hice en [mi archivo](https://github.com/cvlolo/IV-Proyecto/blob/master/Vagrantfile)
-
-## Aprovisionamiento con Ansible
-
-Para poder aprovisionar nuestra Iaas vamos a utilizar ansible. Para instalarlo necesitamos usar el comando  sudo apt-get install ansible. Una vez instalado, creamos los archivos de configuración como [este](https://github.com/cvlolo/IV-Proyecto/blob/master/ansibleConf.yml) y [este](https://github.com/cvlolo/IV-Proyecto/blob/master/ansible.cfg).
-
-Esto permitirá que la VM desplegada en AWS tenga todo lo necesario para poder ofrecer el servicio deseado. Podemos acceder en cualquier momento y mediante ssh a la VM de AWS con el comando ssh -i clave.pem ubuntu@DNS (utilizamos nuestra clave de aws así como el dns).
-
-## Automatizando con Fabric
-
-Vamos a utilizar fabric para agilizar todo este proceso de despliegue. En primer lugar, instalamos fabric con apt-get install fabric y creamos nuestro propio fichero(https://github.com/cvlolo/IV-Proyecto/blob/master/despliegue/fabfile.py) con las instrucciones necesarias para desplegar la aplicación.
-
-Para usar fabric, habría que utilizar el comando fab -f rutaDeFabric -i KEY.pem -H ubuntu@DNS funcion
-
-Por último, realizo el siguiente [script](https://github.com/cvlolo/IV-Proyecto/blob/master/provision/auto.sh) para agilizar todo el proceso.
-
-Despliegue final: 34.217.5.142
 
 
 
