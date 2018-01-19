@@ -13,6 +13,7 @@ def Install():
 	run('sudo apt-get install -y python')
 	run('sudo apt-get install -y python-pip')
 	run('sudo apt-get install -y libpq-dev')
+	run('sudo apt-get install -y gunicorn')
 	run('pip install -r ~/IV-Proyecto/requirements.txt')
 
 def Uninstall():
@@ -28,7 +29,7 @@ def TestDjango():
 
 def DjangoUp():
 	TestDjango()
-	run('cd ~/IV-Proyecto/servicioWeb/ && gunicorn servicioWeb.wsgi -b 0.0.0.0:2000')
+	run('cd ~/IV-Proyecto/servicioWeb/ && sudo gunicorn servicioWeb.wsgi -b 0.0.0.0:80')
 
 def botUp():
 	run('cd ~/IV-Proyecto/ATPBot/ && python ATPbot.py')
