@@ -12,8 +12,8 @@ def Install():
 	run("sudo apt-get update")
 	run('sudo apt-get install -y python')
 	run('sudo apt-get install -y python-pip')
-	run('sudo apt-get install -y libpq-dev')
 	run('sudo apt-get install -y gunicorn')
+	run('sudo apt-get install -y libpq-dev')
 	run('pip install -r ~/IV-Proyecto/requirements.txt')
 
 def Uninstall():
